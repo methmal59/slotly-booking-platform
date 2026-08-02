@@ -2,7 +2,7 @@
 
 A booking platform for salons and spas in Sri Lanka. Customers book, cancel, and reschedule appointments by chatting with an AI agent on WhatsApp — in Sinhala or English. Businesses get a dashboard, a public storefront, and automatic staff notifications.
 
-It's running in production right now, with a real salon and real customers.
+It's running in production right now for Sri Lankan salons.
 
 > **This repo is a case study, not the source code.** The platform is closed-source, so this page explains the architecture, the hard problems, and how I solved them — plus a few real code excerpts. Full commit history and a code walkthrough available on request.
 
@@ -22,7 +22,7 @@ Storefront and dashboard demo: available on request.
 
 | | |
 |---|---|
-| **Status** | In production with a live salon (real customers, daily bookings) |
+| **Status** | In production with live salons (real customers, daily bookings) |
 | **Services** | 4 separately deployed services: core API, AI chatbot, tenant web app, admin app |
 | **AI** | LangGraph state machine + Google Gemini, 8 conversation flows, Sinhala + English |
 | **Multi-tenancy** | One MySQL schema per business, one WhatsApp number per salon |
