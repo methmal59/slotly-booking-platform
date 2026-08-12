@@ -146,6 +146,15 @@ Three small, self-contained files, copied from the production codebase:
 - [`excerpts/note_sanitizer.py`](excerpts/note_sanitizer.py) — sanitizing customer free text before it travels
 - [`excerpts/tenant_routing.py`](excerpts/tenant_routing.py) — routing webhooks to the right salon, with fail-open config caching
 
+## Deep dives
+
+Four longer reads for anyone who wants the full engineering story:
+
+* [`ARCHITECTURE.md`](ARCHITECTURE.md) — the four services, the contracts between them, and the life of a message from webhook to reply
+* [`EVALS.md`](EVALS.md) — how you test an LLM system: 1,400+ deterministic tests plus a nightly real-model eval suite with a regression gate
+* [`RELIABILITY.md`](RELIABILITY.md) — production war stories: the day the model leaked its own prompt, timeouts that aren't failures, and choosing fail-open vs fail-safe
+* [`COST_AND_LATENCY.md`](COST_AND_LATENCY.md) — sub-second webhook acks, a two-call-per-turn token ceiling, and measuring cost instead of guessing
+
 ## Screenshots
 
 *(coming soon — bot conversation, dashboard, storefront)*
