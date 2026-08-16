@@ -26,7 +26,7 @@ Storefront and dashboard demo: available on request.
 | **Services** | 4 separately deployed services: core API, AI chatbot, tenant web app, admin app |
 | **AI** | LangGraph state machine + Google Gemini, 8 conversation flows, Sinhala + English |
 | **Multi-tenancy** | One MySQL schema per business, one WhatsApp number per salon |
-| **Tests** | 1,400+ automated tests, plus a real-LLM eval suite that runs nightly in CI |
+| **Tests** | 1,701+ automated tests, plus a real-LLM eval suite that runs nightly in CI |
 | **Speed** | Webhooks acknowledged in under 1 second; conversations survive restarts |
 
 ## Why this exists
