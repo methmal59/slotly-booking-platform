@@ -6,6 +6,11 @@ It's running in production right now for Sri Lankan salons.
 
 > **This repo is a case study, not the source code.** The platform is closed-source, so this page explains the architecture, the hard problems, and how I solved them — plus a few real code excerpts. Full commit history and a code walkthrough available on request.
 
+<p align="center">
+  <img src="assets/bot-booking.gif" width="330" alt="A full WhatsApp booking conversation: greeting buttons, service picker, date and time pickers, booking summary, and confirmation">
+</p>
+<p align="center"><em>A full booking, end to end — every step tappable, typing works everywhere.</em></p>
+
 ---
 
 ## Try it yourself 💬
@@ -42,6 +47,15 @@ The usual booking SaaS tools don't fit this market. They're English-only, priced
 - **A staff dashboard** for bookings, services, branches, staff, leave, and settings.
 - **An admin app** for onboarding and managing the businesses on the platform.
 - **Staff notifications and customer reminders** over WhatsApp, using pre-approved Meta templates.
+
+## See it in action
+
+| Mid-flow revision | Honest about availability | Sinhala |
+|---|---|---|
+| <img src="assets/bot-revision.gif" width="250" alt="Customer types 'actually make it 3:30pm' mid-booking; the bot re-checks availability and shows an updated summary"> | <img src="assets/bot-honesty.gif" width="250" alt="The bot explains a 5pm Hair Colour can't fit before the 6pm close and offers real alternative times"> | <img src="assets/bot-booking-sinhala.gif" width="250" alt="The same booking flow in casual spoken Sinhala"> |
+| *"actually make it 3:30pm" — latest value wins, availability re-checked, summary re-shown* | *A slot that can't fit is explained honestly — never "someone just took it"* | *Casual spoken Sinhala, structured data stays English* |
+
+*(Scripted demos of the production bot's real reply formats — message the demo number above to try it live.)*
 
 ## Architecture
 
@@ -157,7 +171,19 @@ Four longer reads for anyone who wants the full engineering story:
 
 ## Screenshots
 
-*(coming soon — bot conversation, dashboard, storefront)*
+The web side, running with demo data:
+
+<img src="assets/dashboard.png" alt="Business dashboard: monthly revenue in LKR, bookings, completion rate, top services, and today's schedule">
+
+<img src="assets/bookings.png" alt="Bookings view: a pending booking request awaiting approval, confirmed bookings with check-in, and completed bookings">
+
+<img src="assets/storefront.png" alt="Public tenant storefront with live open/closed status and booking call-to-action">
+
+And what a branch manager's phone shows the moment a booking lands:
+
+<p align="center">
+  <img src="assets/staff-notification.png" width="300" alt="WhatsApp template message notifying a branch manager of a new confirmed booking">
+</p>
 
 ---
 
