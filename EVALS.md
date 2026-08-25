@@ -1,4 +1,4 @@
-﻿# How I test an LLM system
+# How I test an LLM system
 
 You cannot unit test a language model. The same prompt gives you slightly different words every run, so `assertEqual` is useless the moment a real model enters the loop. But "we eyeballed some chats and it seemed fine" is not engineering either.
 

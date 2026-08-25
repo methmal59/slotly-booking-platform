@@ -1,4 +1,4 @@
-﻿# Treating the LLM as an unreliable dependency
+# Treating the LLM as an unreliable dependency
 
 The most useful mental shift I made building Slotly: the LLM is not the product, it is a *dependency*, and it fails in stranger ways than a database. It goes down, it slows down, it makes things up, and it can be talked into things. Every one of those failure modes has reached this system in production or in adversarial testing. Here is what each one taught me.
 
