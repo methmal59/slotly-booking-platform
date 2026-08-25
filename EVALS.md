@@ -1,10 +1,10 @@
-# How I test an LLM system
+﻿# How I test an LLM system
 
 You cannot unit test a language model. The same prompt gives you slightly different words every run, so `assertEqual` is useless the moment a real model enters the loop. But "we eyeballed some chats and it seemed fine" is not engineering either.
 
 Slotly's answer is two layers. Each one catches what the other cannot.
 
-## Layer 1: 1,400+ deterministic tests, the LLM faked
+## Layer 1: 1,701+ deterministic tests, the LLM faked
 
 Both Gemini seams (the NLU call and the reply call) are replaced with fakes that return exactly what I tell them to. That makes everything downstream deterministic, free, and fast enough to run on every pull request.
 

@@ -1,4 +1,4 @@
-# Treating the LLM as an unreliable dependency
+﻿# Treating the LLM as an unreliable dependency
 
 The most useful mental shift I made building Slotly: the LLM is not the product, it is a *dependency*, and it fails in stranger ways than a database. It goes down, it slows down, it makes things up, and it can be talked into things. Every one of those failure modes has reached this system in production or in adversarial testing. Here is what each one taught me.
 
@@ -53,4 +53,4 @@ And one posture that surprises people: some failures should produce *silence*, n
 
 With no model at all (key removed, quota tripped, mid conversation death), keyword intent matching and deterministic date and time parsers keep basic booking alive, and the tappable lists and buttons still work because they never needed the model in the first place. This is tested end to end: a full booking completes against the real API with the LLM disabled, and a failure injection suite kills Gemini partway through a conversation and checks the accumulated state still carries the booking to completion.
 
-Every incident above shipped with regression tests. The suite is past 1,400 tests, and the nightly eval run watches the parts tests cannot pin.
+Every incident above shipped with regression tests. The suite is past 1,700 tests, and the nightly eval run watches the parts tests cannot pin.
